@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.LoginActivity">
+        <activity android:name=".activities.JobAdvertActivity"></activity>
+        <activity android:name=".activities.JobDetailActivity" />
+        <activity android:name=".activities.ListAdvertActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".data_models.jobProfile" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,5 +22,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
