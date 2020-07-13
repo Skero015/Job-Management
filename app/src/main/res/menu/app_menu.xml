@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnuEditProfile"
+        android:orderInCategory="100"
+        android:title="@string/edit_profile" />
+    <item
+        android:id="@+id/mnuLogout"
+        android:orderInCategory="100"
+        android:title="@string/logout" />
+
+    <item
+        android:id="@+id/mnuFavourite"
+        android:icon="@drawable/ic_fav"
+        android:orderInCategory="100"
+        android:title="@string/favourite"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/mnuAdd"
+        android:icon="@drawable/ic_add_2"
+        android:orderInCategory="100"
+        android:title="@string/add"
+        app:showAsAction="ifRoom" />
+
+</menu>
