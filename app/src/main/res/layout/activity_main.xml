@@ -104,5 +104,4 @@
             style="?android:attr/buttonBarStyle"
             android:textColor="#FFFFFF" />
     </LinearLayout>
-
 </LinearLayout>
