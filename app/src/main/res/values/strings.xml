@@ -6,5 +6,30 @@
     <string name="keep_me_logged_in">Keep Me Logged in</string>
     <string name="login">Login</string>
     <string name="todo">TODO</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="favourite">Favourite</string>
+    <string name="add">Add</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="email_address">Email address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="cellphone_number">Cellphone Number</string>
+    <string name="identity_number">Identity Number</string>
+    <string name="diploma">Diploma</string>
+    <string name="field_of_study">Field of study</string>
+    <string name="register">Register</string>
+    <string name="register_profile">Register Profile</string>
+</resources>
+
+<resources>
+    <string name="app_name">Job Management</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="job_adverts">Job Adverts</string>
+    <string name="keep_me_logged_in">Keep Me Logged in</string>
+    <string name="login">Login</string>
+    <string name="todo">TODO</string>
     <string name="register">Register</string>
 </resources>
