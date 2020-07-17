@@ -9,7 +9,7 @@ import com.example.jobmanagement.data_models.JobProfile;
 import java.util.List;
 
 @Dao
-public interface JobProfileDao extends GenericDao{
+public interface JobProfileDao extends GenericDao<JobProfile>{
 
     @Query("DELETE FROM `Job Profile` WHERE id = :id")
     void delete(long id);

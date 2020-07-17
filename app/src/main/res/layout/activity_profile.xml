@@ -2,162 +2,228 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ProfileActivity"
-    android:orientation="vertical">
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".activities.ProfileActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
         android:text="@string/register_profile"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="22dp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/txtEmailRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp"
+        android:layout_gravity="center_horizontal"
         android:hint="@string/enter_email_address"
-        app:boxBackgroundColor="#E91E63"
-        app:boxBackgroundMode="filled"
-        app:boxStrokeColor="@color/colorAccent"
-        app:boxStrokeWidth="2dp"
-        app:hintAnimationEnabled="true"
-        app:hintEnabled="true">
+        android:textColorHint="@android:color/transparent"
+        app:boxCornerRadiusTopStart="5dp"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/email">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
+            android:id="@+id/etEmailRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email_address" />
+            android:hint="@string/enter_email_address">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/txtPasswordRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:hint="@string/password"
+        app:boxCornerRadiusTopStart="5dp"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/lock">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etPasswordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password" />
+            android:hint="@string/password"
+            android:inputType="textPassword">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/txtComfirmPasswordRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:hint="@string/confirm_password"
+        app:boxCornerRadiusTopStart="5dp"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/lock">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etConfirmPass"
+            android:id="@+id/etConfirmPasswordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/confirm_password" />
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/txtFirstNameRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:hint="@string/first_name"
+        app:boxCornerRadiusTopStart="5dp"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_person">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etfirstName"
+            android:id="@+id/etFirstNameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/first_name" />
+            android:hint="@string/first_name">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/txtLastNameRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:hint="@string/last_name"
+        app:boxCornerRadiusTopStart="5dp"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_person">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etLastName"
+            android:id="@+id/etLastNameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/last_name" />
+            android:hint="@string/last_name">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/txtCellphoneRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:hint="@string/cellphone_number"
+        app:boxCornerRadiusTopStart="5dp"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_phone">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etCellNo"
+            android:id="@+id/etCellphoneRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/cellphone_number" />
+            android:hint="@string/cellphone_number"
+            android:inputType="phone">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/txtIdNumRegister"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:hint="@string/identity_number"
+        app:boxCornerRadiusTopStart="5dp"
+        app:counterMaxLength="13"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/idno">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etIdentityNo"
+            android:id="@+id/etIdNumRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/identity_number" />
+            android:hint="@string/identity_number"
+            android:inputType="number">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/txtEducation"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:hint="@string/high_q"
+        app:boxCornerRadiusTopStart="5dp"
+        app:endIconMode="dropdown_menu"
+        app:startIconDrawable="@drawable/edu">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etQualificationList"
+        <AutoCompleteTextView
+            android:id="@+id/etEdAuto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/diploma" />
+            android:hint="@string/high_q"
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp">
+        android:id="@+id/txtStudy"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:hint="Field Of Study"
+        app:boxCornerRadiusTopStart="5dp"
+        app:endIconMode="dropdown_menu"
+        app:startIconDrawable="@drawable/edu">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etFieldOfStudy"
+        <AutoCompleteTextView
+            android:id="@+id/etStudyAuto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/field_of_study" />
+            android:hint="@string/field_of_study"
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp"
-        android:drawableStart="@drawable/ic_save"
-        android:text="@string/register" />
-
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="REGISTER"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_save" />
 </LinearLayout>

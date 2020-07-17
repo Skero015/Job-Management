@@ -12,7 +12,6 @@ public class Connections {
     private Connections (Context context)
     {
         database = Room.databaseBuilder(context, AppDatabase.class, "db_job_management")
-                .allowMainThreadQueries()
                 .build();
     }
 

@@ -6,15 +6,17 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+
+//yes, all else has
 @Dao
 public interface GenericDao<T> {
     @Insert
-    void insert (T id);
+    void insert (T object);
 
     @Delete
-    void delete (T id);
+    void delete (T object);
 
     @Update
-    void update (T id);
+    void update (T object);
 
 }

@@ -8,18 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activities.JobAdvertActivity"></activity>
+        android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
+        <activity android:name=".activities.JobAdvertActivity"/>
         <activity android:name=".activities.JobDetailActivity" />
         <activity android:name=".activities.ListAdvertActivity" />
         <activity android:name=".activities.ProfileActivity" />
-        <activity android:name=".data_models.jobProfile" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activities.LoginActivity" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".data_models.JobProfile" />
     </application>
 </manifest>
