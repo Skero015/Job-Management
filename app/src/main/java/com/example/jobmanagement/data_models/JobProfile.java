@@ -5,9 +5,7 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity (tableName = "Job Profile", indices = {@Index(value = {"email", "identityNumber"},
-        unique = true)})
-
+@Entity (tableName = "Job Profile", indices = {@Index(value = {"email", "identityNumber"}, unique = true)})
 public class JobProfile
 {
     @PrimaryKey

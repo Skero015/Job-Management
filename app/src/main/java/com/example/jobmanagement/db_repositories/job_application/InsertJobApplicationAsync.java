@@ -29,7 +29,7 @@ public class InsertJobApplicationAsync extends AsyncTask<Integer, Void, JobAppli
 
         try
         {
-            JobApplication jobApplication = Connections.getInstance(context).getDatabase().getJobProfileDAO().getJobProfileById(this.jobApplication.getId());
+            JobProfile jobProfile = Connections.getInstance(context).getDatabase().getJobProfileDAO().getJobProfileById(this.jobApplication.getProfileId());
 
             if(jobApplication == null)
             {

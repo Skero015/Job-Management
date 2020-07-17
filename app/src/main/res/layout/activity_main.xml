@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
 
     <TextView
@@ -23,11 +24,11 @@
         android:layout_width="match_parent"
         android:layout_height="114dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/register_icon"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/register_icon" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvEmailLogin"
+        android:id="@+id/txtEmailLogin"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,22 +38,24 @@
         app:boxStrokeColor="@android:color/holo_blue_light">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtPassLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
-        app:boxStrokeColor="@android:color/black"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:boxStrokeColor="@android:color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvPassLogin"
+            android:id="@+id/etPasswordLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password" />
@@ -77,31 +80,31 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnRegisterMain"
+            style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:backgroundTint="#E91E63"
+            android:backgroundTint="@color/colorPrimary"
             android:drawableStart="@drawable/ic_person_add"
             android:drawablePadding="-20dp"
             android:text="@string/register"
-            style="?android:attr/buttonBarButtonStyle"
             android:textColor="#FFFFFF" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnLoginMain"
+            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="30dp"
             android:layout_weight="1"
-            android:backgroundTint="#E91E63"
+            android:backgroundTint="@color/colorPrimary"
             android:drawableStart="@drawable/ic_login"
             android:drawablePadding="-20dp"
             android:text="@string/login"
-            style="?android:attr/buttonBarStyle"
             android:textColor="#FFFFFF" />
     </LinearLayout>
 </LinearLayout>

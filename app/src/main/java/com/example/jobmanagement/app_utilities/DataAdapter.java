@@ -18,11 +18,16 @@ import java.util.ArrayList;
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     private ArrayList<JobAdvert> jobAdverts;
-    Context activity;
+    ItemClicked activity;
+
+    public interface ItemClicked
+    {
+        void  onItemClicked(int index);
+    }
 
     public DataAdapter(Context context, ArrayList<JobAdvert> list){
         jobAdverts = list;
-        activity = context;
+        activity = (ItemClicked)context;
 
     }
 
@@ -35,10 +40,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tvAuthor = itemView.findViewById(R.id.tvAuthor);
-            tvTitle = itemView.findViewById(R.id.tvTitle);
-            ivGenre = itemView.findViewById(R.id.ivGenre);
-
 
         }
 
@@ -48,7 +49,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     @NonNull
     @Override
     public DataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_row, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_layout, viewGroup, false);
         return new ViewHolder(view);
     }
 
@@ -56,18 +57,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull DataAdapter.ViewHolder viewHolder, int index) {
         viewHolder.itemView.setTag(jobAdverts.get(index));
 
-        viewHolder.tvTitle.setText(jobAdverts.get(index).getTitle());
-        viewHolder.tvAuthor.setText(jobAdverts.get(index).getAuthor());
 
-        if (jobAdverts.get(index).getGenre().equals("scifi")){
-            viewHolder.ivGenre.setImageResource(R.drawable.scfi);
-        } else if (jobAdverts.get(index).getGenre().equals("drama")) {
-            viewHolder.ivGenre.setImageResource(R.drawable.drama);
-        } else if (jobAdverts.get(index).getGenre().equals("romance")){
-            viewHolder.ivGenre.setImageResource(R.drawable.romance);
-        } else {
-            viewHolder.ivGenre.setImageResource((R.drawable.images));
-        }
     }
 
     @Override

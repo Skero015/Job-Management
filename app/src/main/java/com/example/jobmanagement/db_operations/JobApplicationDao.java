@@ -11,9 +11,9 @@ import com.example.jobmanagement.data_models.JobProfile;
 import java.util.List;
 
 @Dao
-public interface JobApplicationDao extends GenericDao{
+public interface JobApplicationDao extends GenericDao<JobApplication>{
 
-    @Query("DELETE FROM `Job Application` WHERE jobId = :id")
+    @Query("DELETE FROM `Job Application` WHERE jobId = :id & profileId=:applicationId")
     void delete(long id, long applicationId);
 
     @Query("SELECT * FROM `Job Application`")

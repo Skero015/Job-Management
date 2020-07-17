@@ -30,7 +30,7 @@ public class DeleteJobApplicationAsync extends AsyncTask<Integer, Void, JobAppli
 
         try
         {
-            Connections.getInstance(context).getDatabase().getJobApplicationDAO().delete(this.id);
+            Connections.getInstance(context).getDatabase().getJobApplicationDAO().delete(this.id,this.id);
         }
         catch (Exception e)
         {
